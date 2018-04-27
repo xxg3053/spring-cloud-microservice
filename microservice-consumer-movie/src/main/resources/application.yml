@@ -1,0 +1,16 @@
+server:
+  port: 8010
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    serviceUrl:
+      defaultZone: http://user:password123@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true #显示ip
+spring:
+  application:
+    name:  microservice-consumer-movie
+feign:
+  hystrix:
+    enabled: true  #开启feign对hystrix的支持
